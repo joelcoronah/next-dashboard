@@ -1,7 +1,15 @@
+import { CartCounter } from "../../shopping-cart/components/CartCounter";
+
+export const metadata = {
+  title: "Counter",
+  description: "Contador Client Side",
+};
+
 export default function CounterPage() {
   return (
-    <div>
-      <h1>Hello Counter Page</h1>
+    <div className="flex flex-col items-center justify-center w-full h-full select-none	">
+      <span>Productos en el carrito</span>
+      <CartCounter value={20} />
     </div>
   );
 }
