@@ -20,16 +20,16 @@ export default function PokemonCard({ pokemon }: Props) {
             height={100}
             key={id}
             alt={name}
+            priority={false}
           />
-          <p className="pt-2 text-lg font-semibold text-gray-50">{name}</p>
-          <Link
-            href={`dashboard/pokemon/${id}`}
-            className="px-4 py-2 hover:bg-gray-100 flex"
-          >
-            <div className="mt-5">
-              <a className="border rounded-full py-2 px-4 text-xs font-semibold text-gray-100">
+          <p className="pt-2 text-lg font-semibold text-gray-50 capitalize">
+            {name}
+          </p>
+          <Link href={`/dashboard/pokemon/${id}`} className="px-4 py-2 flex">
+            <div className="mt-5  ">
+              <div className="border rounded-full py-2 px-4 text-xs font-semibold text-gray-100 hover:opacity-50 ">
                 Leer más
-              </a>
+              </div>
             </div>
           </Link>
         </div>
